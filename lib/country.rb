@@ -1,6 +1,6 @@
 class Country
   attr_accessor :name, :confirmed_cases, :overall_deaths, :recoveries
-  @@countries = []
+  @@records = []
 
   def initialize(country_name, country_cases, country_deaths, country_recoveries)
     @name = country_name
@@ -8,11 +8,11 @@ class Country
     @overall_deaths = country_deaths
     @recoveries = country_recoveries
 
-    @@countries << self
+    @@records << self
   end
   
   def self.all
-    @@countries
+    @@records
   end
 end
 
